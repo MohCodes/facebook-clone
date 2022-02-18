@@ -36,3 +36,197 @@
     transform: rotate(360deg);
   }
 }
+
+/* Login Page */
+
+.mainLoginContainer {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  background-color: #f0f2f5;
+}
+
+.fbImage {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.loginContainer {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.loginFormInputs {
+  height: 5vh;
+  width: 80%;
+  border-radius: 1vh;
+}
+
+.loginButton {
+  color: white;
+  font-size: 20px;
+  background-color: #1877f2;
+  border: #1877f2 solid;
+  height: 5vh;
+  width: 80%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.createAccount {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #42b72a;
+  border: #42b72a solid;
+  color: white;
+  height: 5vh;
+  width: 50%;
+  border-radius: 6px;
+  font-size: 17px;
+}
+.lineLogin {
+  border-bottom: 1px solid #dadde1;
+  margin: 20px 16px;
+  width: 85%;
+}
+
+.facebooklogo {
+  width: 50%;
+  height: 30%;
+}
+
+.imageheader {
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  margin-left: 3vh;
+  margin-top: -2vh;
+}
+
+a.facebookLink:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+  cursor: pointer;
+}
+
+a.facebookLink:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+  cursor: pointer;
+}
+
+.loginFooter {
+  border: 2px red solid;
+  height: 19.5vh;
+}
+
+.navBarContainer {
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.fblogoHomePage {
+  max-width: 70%;
+  max-height: 50%;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+.imgContainerHomePage {
+  max-width: 4.2%;
+  margin-left: 0.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBarSearch {
+  background-color: #f2f3f5;
+  min-width: 15%;
+  height: 70%;
+  border-radius: 5vh;
+  margin-left: -0.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchLogo {
+  width: 3vh;
+  height: 80%;
+  margin-left: -3vh;
+  margin-right: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar {
+  border: none;
+  border-radius: 1vh;
+  height: 60%;
+  width: 60%;
+  background-color: #f2f3f5;
+}
+
+.searchBar:focus {
+  outline: none;
+}
+
+.navBarLogosContainer {
+  height: 100%;
+  width: 43%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icons {
+  padding: 2.1vh;
+  padding-right: 4vh;
+  padding-left: 4vh;
+  cursor: pointer;
+  border-radius: 1vh;
+}
+
+.icons:hover {
+  background-color: #ebeef0;
+}
+
+.userContainerNavBar {
+  border: 2px red solid;
+  height: 98%;
+  width: 37.5%;
+}
