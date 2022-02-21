@@ -154,10 +154,13 @@ a.facebookLink:visited {
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .fblogoHomePage {
-  max-width: 70%;
+  max-width: 60%;
   max-height: 50%;
   object-fit: contain;
   display: block;
@@ -226,7 +229,70 @@ a.facebookLink:visited {
 }
 
 .userContainerNavBar {
-  border: 2px red solid;
   height: 98%;
   width: 37.5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userNavBar {
+  height: 80%;
+  width: 23%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5vh;
+  cursor: pointer;
+}
+
+.userNavBar:hover {
+  background-color: #ebeef0;
+}
+
+button {
+  margin-top: 8vh;
+}
+.userPictureNavBar {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vh;
+}
+
+.userPicture {
+  width: 100%;
+  height: 80%;
+  border-radius: 8vh;
+  object-fit: fill;
+}
+
+.userNameNavBar {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vh;
+  margin-left: -1vh;
+}
+
+.menuNavBar {
+  width: 7%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userIcons {
+  border-radius: 10vh;
+  padding: 1vh;
+  cursor: pointer;
+  background-color: #d9dbdb;
+}
+.userIcons:hover {
+  background-color: #cdd0d1;
 }
