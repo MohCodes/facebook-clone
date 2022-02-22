@@ -237,7 +237,7 @@ a.facebookLink:visited {
 }
 
 .userNavBar {
-  height: 80%;
+  height: 90%;
   width: 23%;
   display: flex;
   justify-content: flex-start;
@@ -250,9 +250,6 @@ a.facebookLink:visited {
   background-color: #ebeef0;
 }
 
-button {
-  margin-top: 8vh;
-}
 .userPictureNavBar {
   height: 100%;
   width: 30%;
@@ -280,7 +277,8 @@ button {
 }
 
 .menuNavBar {
-  width: 7%;
+  min-width: 7%;
+  max-width: 5%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -289,10 +287,88 @@ button {
 
 .userIcons {
   border-radius: 10vh;
-  padding: 1vh;
+
+  padding: 1.2vh;
   cursor: pointer;
   background-color: #d9dbdb;
 }
 .userIcons:hover {
   background-color: #cdd0d1;
+}
+
+.ContentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+}
+
+.mainBars {
+  border: #1877f2 2px solid;
+  height: 100%;
+}
+
+.leftSideBar {
+  width: 18%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #f0f2f5;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+.mainContent {
+  width: 62%;
+  background-color: #f0f2f5;
+}
+
+.friendsSideBar {
+  width: 20%;
+  background-color: #f0f2f5;
+}
+
+.dividerDiv {
+  margin-top: 7vh;
+  background-color: #f0f2f5;
+}
+
+.leftSideBarComponent {
+  margin-left: 1vh;
+  margin-top: 1vh;
+  width: 90%;
+  height: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
+.leftSideBarComponent:hover {
+  background-color: #bdbdbd4b;
+}
+
+.leftSideBarComponentDisplay {
+  height: 80%;
+  width: 13%;
+  margin-left: 5%;
+  border-radius: 4vh;
+}
+
+.leftSideBarComponentLabel {
+  height: 80%;
+  margin-left: 2%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userPictureSideBar {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4vh;
 }

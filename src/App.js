@@ -42,7 +42,9 @@ const logout = async()=>{
   return (
     <div className="App">
       {user? 
-      (<HomePage userName = {getUserFirstName(userInformation.displayName)}  userImageNav = {userInformation.photoURL} logout = {logout}/>)
+      (<HomePage userFullName={userInformation.displayName} 
+                userName = {getUserFirstName(userInformation.displayName)}  
+                userImageNav = {userInformation.photoURL} logout = {logout}/>)
       :(<Login/>)
       }
     </div>

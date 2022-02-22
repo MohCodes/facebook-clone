@@ -1,16 +1,55 @@
 import TopNavBar from "./TopNavBar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import{faStar,faNewspaper,faCalendar,faFlag,faHome, faDesktop,faStore,faUserGroup,faGamepad,faCaretDown,faMessage,faBell,faGrip,famedical,faDatabase, faBookmark,faClockRotateLeft} from "@fortawesome/free-solid-svg-icons"
 
 
 
 function Homepage(props) {
 
 
+    const leftSideBarComponentsArray = [{name:"Find Friends", display:faUserGroup},{name:"MarketPlace",display:faStore},
+                                        {name:"Memories",display: faClockRotateLeft},{name:"Saved" ,display:faBookmark},
+                                        {name:"Pages", display:faFlag},{name:"Events",display:faCalendar},
+                                        {name:"Most Recent",display:faNewspaper},{name:"Favorites",display:faStar}]
+
+    const leftSideBarComponentsArrayDisplay = leftSideBarComponentsArray.map((item)=>{
+        return(
+        <div className="leftSideBarComponent">
+            <div className="leftSideBarComponentDisplay"><FontAwesomeIcon size="xl" className="userPictureSideBar" icon={item.display} /></div>
+            <div className="leftSideBarComponentLabel">{item.name}</div>
+        </div>
+        )
+    })
 
     return (  <div>
         <TopNavBar userName ={props.userName} userImage = {props.userImageNav} />
-        <button onClick={props.logout}>logout</button>
+        <div className="dividerDiv" onClick={props.logout}>logout</div>
 
-    </div>);
+    <div className="ContentContainer">
+
+        <div className="mainBars leftSideBar">
+            <div className="leftSideBarComponent">
+                <div className="leftSideBarComponentDisplay"><img className="userPictureSideBar" alt="userDisplay" src={props.userImageNav}/></div>
+                <div className="leftSideBarComponentLabel">{props.userFullName}</div>
+            </div>
+
+            {leftSideBarComponentsArrayDisplay}
+        </div>
+
+        <div className="mainBars mainContent">
+
+        </div>
+
+        <div className="mainBars friendsSideBar">
+
+        </div>
+
+    </div>
+
+
+    </div>
+    );
 }
 
 export default Homepage;
