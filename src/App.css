@@ -304,7 +304,6 @@ a.facebookLink:visited {
 }
 
 .mainBars {
-  border: #1877f2 2px solid;
   height: 100%;
 }
 
@@ -321,11 +320,13 @@ a.facebookLink:visited {
 .mainContent {
   width: 62%;
   background-color: #f0f2f5;
+  border: #1877f2 2px solid;
 }
 
 .friendsSideBar {
   width: 20%;
   background-color: #f0f2f5;
+  border: #1877f2 2px solid;
 }
 
 .dividerDiv {
@@ -371,4 +372,5 @@ a.facebookLink:visited {
   max-height: 100%;
   object-fit: contain;
   border-radius: 4vh;
+  margin-top: 1%;
 }

@@ -1,21 +1,30 @@
 import TopNavBar from "./TopNavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import{faStar,faNewspaper,faCalendar,faFlag,faHome, faDesktop,faStore,faUserGroup,faGamepad,faCaretDown,faMessage,faBell,faGrip,famedical,faDatabase, faBookmark,faClockRotateLeft} from "@fortawesome/free-solid-svg-icons"
+import { dummyAPIFetch } from "../Util/firebase";
 
 
-
+let randomUserArray 
 function Homepage(props) {
+    const dummyAPIFetchFunction = async()=>{
+        randomUserArray = await fetch(dummyAPIFetch).then(data=>data.json())
+        console.log(randomUserArray)
+    }
 
+    dummyAPIFetchFunction();
 
-    const leftSideBarComponentsArray = [{name:"Find Friends", display:faUserGroup},{name:"MarketPlace",display:faStore},
-                                        {name:"Memories",display: faClockRotateLeft},{name:"Saved" ,display:faBookmark},
-                                        {name:"Pages", display:faFlag},{name:"Events",display:faCalendar},
-                                        {name:"Most Recent",display:faNewspaper},{name:"Favorites",display:faStar}]
+    const leftSideBarComponentsArray = [{name:"Find Friends", display:faUserGroup},
+                                        {name:"MarketPlace",display:faStore},
+                                        {name:"Memories",display: faClockRotateLeft},
+                                        {name:"Saved" ,display:faBookmark},
+                                        {name:"Pages", display:faFlag},
+                                        {name:"Events",display:faCalendar},
+                                        {name:"Most Recent",display:faNewspaper},
+                                        {name:"Favorites",display:faStar}]
 
     const leftSideBarComponentsArrayDisplay = leftSideBarComponentsArray.map((item)=>{
         return(
-        <div className="leftSideBarComponent">
+        <div key = {item.name} className="leftSideBarComponent">
             <div className="leftSideBarComponentDisplay"><FontAwesomeIcon size="xl" className="userPictureSideBar" icon={item.display} /></div>
             <div className="leftSideBarComponentLabel">{item.name}</div>
         </div>
