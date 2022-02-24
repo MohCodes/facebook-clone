@@ -1,17 +1,28 @@
 import TopNavBar from "./TopNavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import{faStar,faNewspaper,faCalendar,faFlag,faHome, faDesktop,faStore,faUserGroup,faGamepad,faCaretDown,faMessage,faBell,faGrip,famedical,faDatabase, faBookmark,faClockRotateLeft} from "@fortawesome/free-solid-svg-icons"
+import{faEllipsis,faMagnifyingGlass,faStar,faNewspaper,faCalendar,faFlag,faStore,faUserGroup, faBookmark,faClockRotateLeft,faVideo} from "@fortawesome/free-solid-svg-icons"
 import { dummyAPIFetch } from "../Util/firebase";
+import { useEffect, useState } from "react";
 
 
-let randomUserArray 
+
+
 function Homepage(props) {
-    const dummyAPIFetchFunction = async()=>{
-        randomUserArray = await fetch(dummyAPIFetch).then(data=>data.json())
-        console.log(randomUserArray)
-    }
 
-    dummyAPIFetchFunction();
+
+const [randomUserArray,setRandomUserArray] = useState() 
+
+
+useEffect (()=>{
+    const dummyAPIFetchFunction = async()=>{
+        let fetcha = await fetch(dummyAPIFetch)
+        fetcha = await fetcha.json()
+        await setRandomUserArray(fetcha.results )
+        console.log(randomUserArray)
+}
+dummyAPIFetchFunction()
+    
+},[])
 
     const leftSideBarComponentsArray = [{name:"Find Friends", display:faUserGroup},
                                         {name:"MarketPlace",display:faStore},
@@ -30,6 +41,24 @@ function Homepage(props) {
         </div>
         )
     })
+
+    let friendListDisplay
+
+    if(randomUserArray){
+    friendListDisplay = randomUserArray.map((item)=>{
+        
+        return(
+            <div className ="friendCard">
+                        <div className="imageContainerFriend">
+                            <div className="friendImage"><img alt= "userImage" className= "userImage" src={item.picture.thumbnail}/></div>
+                            <div className="onlineIndicator"></div>
+                        </div>
+                        <div className="friendUserName">{item.name.first +" "+ item.name.last }</div>
+                    </div>
+
+        )
+    })
+}
 
     return (  <div>
         <TopNavBar userName ={props.userName} userImage = {props.userImageNav} />
@@ -51,7 +80,20 @@ function Homepage(props) {
         </div>
 
         <div className="mainBars friendsSideBar">
+            <div className="friendHeaderContainer">
+                <div className="contactsText">Contacts</div>
+                <div className="leftSideFriendsBar">
+                <div className="newRoom"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faVideo} /></div>
+                <div className="Search"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faMagnifyingGlass} /></div>
+                <div className="More"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faEllipsis} /></div>
+                </div>
+    
+            </div>
+                <div className="friendContainer">
+                    {friendListDisplay}
 
+                </div>
+                
         </div>
 
     </div>

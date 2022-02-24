@@ -4,7 +4,7 @@ import { FacebookAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"
 
 
-const dummyAPIFetch = "https://randomuser.me/api/?results=20"
+const dummyAPIFetch = "https://randomuser.me/api/?results=10"
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

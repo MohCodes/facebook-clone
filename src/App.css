@@ -374,3 +374,107 @@ a.facebookLink:visited {
   border-radius: 4vh;
   margin-top: 1%;
 }
+
+.friendHeaderContainer {
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactsText {
+  color: #65676b;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  margin-left: 5%;
+}
+
+.friendsBarIcons {
+  width: 100%;
+  cursor: pointer;
+}
+.leftSideFriendsBar {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  margin-right: 5%;
+}
+
+.friendContainer {
+  height: 94%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.friendCard {
+  height: 7%;
+  width: 99%;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.friendCard:hover {
+  background-color: #bdbdbd4b;
+}
+
+.imageContainerFriend {
+  width: 15%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.friendImage {
+  width: 90%;
+  height: 90%;
+  margin-left: 3%;
+  border-radius: 10vh;
+}
+.onlineIndicator {
+  border: white 1px solid;
+  align-self: flex-end;
+  width: 25%;
+  height: 30%;
+  border-radius: 5vh;
+  margin-left: -12%;
+  z-index: 1;
+  background-color: green;
+}
+
+.userImage {
+  border: white 2px solid;
+  z-index: 2;
+  object-fit: fill;
+  border-radius: 5vh;
+  height: 95%;
+  width: 90%;
+}
+.friendUserName {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.newRoom,
+.Search,
+.More {
+  border-radius: 4vh;
+  width: 150%;
+}
+
+.newRoom:hover,
+.Search:hover,
+.More:hover {
+  background-color: #d7dadd;
+}
