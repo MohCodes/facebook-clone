@@ -155,8 +155,10 @@ a.facebookLink:visited {
   align-items: center;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   position: fixed;
+  background-color: rgba(255, 255, 255, 1);
   top: 0;
   width: 100%;
+  z-index: 0;
 }
 
 .fblogoHomePage {
@@ -300,7 +302,7 @@ a.facebookLink:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 89vh;
+  height: 99vh;
 }
 
 .mainBars {
@@ -321,12 +323,12 @@ a.facebookLink:visited {
   width: 62%;
   background-color: #f0f2f5;
   border: #1877f2 2px solid;
+  overflow: hidden;
 }
 
 .friendsSideBar {
   width: 20%;
   background-color: #f0f2f5;
-  border: #1877f2 2px solid;
 }
 
 .dividerDiv {
@@ -386,7 +388,7 @@ a.facebookLink:visited {
   color: #65676b;
   font-weight: 600;
   font-size: 1.0625rem;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .friendsBarIcons {
@@ -416,7 +418,7 @@ a.facebookLink:visited {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   cursor: pointer;
 }
 
@@ -460,10 +462,11 @@ a.facebookLink:visited {
 }
 .friendUserName {
   width: 70%;
-  height: 90%;
+  height: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  font-size: 15px;
 }
 
 .newRoom,
@@ -477,4 +480,90 @@ a.facebookLink:visited {
 .Search:hover,
 .More:hover {
   background-color: #d7dadd;
+}
+
+.MainContainer {
+  border: green 2px solid;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  gap: 2%;
+}
+.MainContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.storiesContainer {
+  border: red 2px solid;
+  height: 20%;
+  width: 60%;
+  margin-top: 2%;
+}
+
+.statuesPost {
+  border: red 2px solid;
+  height: 12%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1vh;
+  background-color: #ffffff;
+}
+
+.inputStatuesContaienr {
+  border: blue 2px solid;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.postContainer {
+  border: rgb(45, 45, 184) 2px solid;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.imageContainerStatuesPost {
+  border: red 2px solid;
+  width: 7%;
+  height: 80%;
+  margin-left: 2%;
+  border-radius: 100%;
+}
+
+.statuesInput {
+  width: 80%;
+  height: 70%;
+  border-radius: 3vh;
+  background-color: #f0f2f5;
+  margin-left: 2%;
+  text-align: center;
+  font-size: larger;
+}
+
+.bottomStatuesBar {
+  border: gold 2px solid;
+  height: 90%;
+  width: 45%;
+  border-radius: 1vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomStatuesBar:hover {
+  background-color: #f0f2f5;
 }

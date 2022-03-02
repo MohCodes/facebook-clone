@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import{faEllipsis,faMagnifyingGlass,faStar,faNewspaper,faCalendar,faFlag,faStore,faUserGroup, faBookmark,faClockRotateLeft,faVideo} from "@fortawesome/free-solid-svg-icons"
 import { dummyAPIFetch } from "../Util/firebase";
 import { useEffect, useState } from "react";
+import MainContent from "./MainContent";
 
 
 
@@ -48,7 +49,7 @@ dummyAPIFetchFunction()
     friendListDisplay = randomUserArray.map((item)=>{
         
         return(
-            <div className ="friendCard">
+            <div  key={item.phone} className ="friendCard">
                         <div className="imageContainerFriend">
                             <div className="friendImage"><img alt= "userImage" className= "userImage" src={item.picture.thumbnail}/></div>
                             <div className="onlineIndicator"></div>
@@ -60,7 +61,7 @@ dummyAPIFetchFunction()
     })
 }
 
-    return (  <div>
+    return (  <div className="homePageContainer">
         <TopNavBar userName ={props.userName} userImage = {props.userImageNav} />
         <div className="dividerDiv" onClick={props.logout}>logout</div>
 
@@ -76,7 +77,7 @@ dummyAPIFetchFunction()
         </div>
 
         <div className="mainBars mainContent">
-
+            <MainContent userImage={props.userImageNav} />
         </div>
 
         <div className="mainBars friendsSideBar">
