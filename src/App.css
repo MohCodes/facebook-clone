@@ -506,7 +506,7 @@ a.facebookLink:visited {
 }
 
 .statuesPost {
-  border: red 2px solid;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   height: 12%;
   width: 60%;
   display: flex;
@@ -518,7 +518,6 @@ a.facebookLink:visited {
 }
 
 .inputStatuesContaienr {
-  border: blue 2px solid;
   width: 100%;
   height: 60%;
   display: flex;
@@ -527,7 +526,6 @@ a.facebookLink:visited {
 }
 
 .postContainer {
-  border: rgb(45, 45, 184) 2px solid;
   width: 100%;
   height: 40%;
   display: flex;
@@ -536,8 +534,7 @@ a.facebookLink:visited {
 }
 
 .imageContainerStatuesPost {
-  border: red 2px solid;
-  width: 7%;
+  width: 9%;
   height: 80%;
   margin-left: 2%;
   border-radius: 100%;
@@ -551,11 +548,11 @@ a.facebookLink:visited {
   margin-left: 2%;
   text-align: center;
   font-size: larger;
+  border: #cdd0d1 solid;
 }
 
 .bottomStatuesBar {
-  border: gold 2px solid;
-  height: 90%;
+  height: 85%;
   width: 45%;
   border-radius: 1vh;
   cursor: pointer;
@@ -566,4 +563,50 @@ a.facebookLink:visited {
 
 .bottomStatuesBar:hover {
   background-color: #f0f2f5;
+}
+
+.userPictureInput {
+  object-fit: fill;
+  border-radius: 100%;
+  height: 100%;
+  width: 90%;
+}
+
+.contentContainer {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  min-width: 60%;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.userContainer {
+  border: #1877f2 solid;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.userImagePostIMG {
+  object-fit: fill;
+  border-radius: 100%;
+  height: 100%;
+  width: 90%;
+}
+
+.userNameContainer {
+  border: #1877f2 solid;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.postTimeStamp {
+  border: #1877f2 solid;
 }

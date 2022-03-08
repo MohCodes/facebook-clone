@@ -1,6 +1,7 @@
 import { ReactComponent as Logo } from "../Util/img/facebooklogo.svg";
 import {app,provider,db} from "../Util/firebase"
 import { FacebookAuthProvider,getAuth, signInWithPopup,onAuthStateChanged} from "firebase/auth";
+import { doc, setDoc, serverTimestamp, collection, getDoc} from "firebase/firestore"; 
 
 
 
@@ -11,12 +12,15 @@ let user
 
 
     const authentication = async ()=>{
-        const provider = new FacebookAuthProvider();
+        const provider =  new FacebookAuthProvider();
         const auth = getAuth();
         auth.languageCode = 'it';
         signInWithPopup(auth,provider).then((result=> {
             user = result.user
             console.log(user)
+            setDoc(doc(db,"user",`${user.uid}`),{
+                userID: user.uid
+            })
         })) 
     }
 

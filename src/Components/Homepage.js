@@ -77,7 +77,7 @@ dummyAPIFetchFunction()
         </div>
 
         <div className="mainBars mainContent">
-            <MainContent userImage={props.userImageNav} />
+            <MainContent userName ={props.userFullName} userImage={props.userImageNav} />
         </div>
 
         <div className="mainBars friendsSideBar">
