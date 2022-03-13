@@ -1,4 +1,6 @@
 Facebook Clone Made from Scratch
+Live Version: https://moefarts.github.io/facebook-clone/
+
 
 Technologies Used
 - React JS
@@ -6,4 +8,7 @@ Technologies Used
 - Font Awesome
 - Firebase (Firestore, Authentication)
 
-Live Version: https://moefarts.github.io/facebook-clone/
+Things to Work on
+- Styling
+- Responsivness
+- Increase Post Control
