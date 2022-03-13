@@ -62,10 +62,10 @@ dummyAPIFetchFunction()
 }
 
     return (  <div className="homePageContainer">
-        <TopNavBar userName ={props.userName} userImage = {props.userImageNav} />
-        <div className="dividerDiv" onClick={props.logout}>logout</div>
+        <TopNavBar userName ={props.userName} userImage = {props.userImageNav} logout={props.logout}/>
+        <div className="dividerDiv" ></div>
 
-    <div className="ContentContainer">
+    <div className="ContentContainer1">
 
         <div className="mainBars leftSideBar">
             <div className="leftSideBarComponent">

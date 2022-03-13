@@ -2,12 +2,16 @@
 
 import {ReactComponent as Logo2} from "../Util/img/magnifying-glass-solid.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import{faHome, faDesktop,faStore,faUserGroup,faGamepad,faCaretDown,faMessage,faBell,faGrip} from "@fortawesome/free-solid-svg-icons"
+import{faHome, faDesktop,faStore,faUserGroup,faGamepad,faCaretDown,faMessage,faBell,faGrip,faRightFromBracket} from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react";
 
 
 
 
 function TopNavBar(props) {
+
+    const [dropDownState,setDropDownState] = useState()
+
     return (  
     <div className="navBarContainer">
 
@@ -44,8 +48,8 @@ function TopNavBar(props) {
         <FontAwesomeIcon size="xl" className="userIcons userNotification" icon={faBell} />
         </div>
 
-        <div className="menuNavBar">
-        <FontAwesomeIcon size="xl" className="userIcons userUserMenu" icon={faCaretDown} />
+        <div className="menuNavBar caretMenu">
+        <FontAwesomeIcon size="xl" className="userIcons userUserMenu" icon={faRightFromBracket} onClick={props.logout} />
         </div>
 
         </div>

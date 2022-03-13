@@ -4,6 +4,8 @@ import {db} from "../Util/firebase"
 import { doc, setDoc, serverTimestamp, getDoc,collection,getDocs} from "firebase/firestore"; 
 import { useEffect, useState } from "react";
 import format from "date-fns/format";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import{faThumbsUp,faComment,faShare} from "@fortawesome/free-solid-svg-icons"
 
 
 
@@ -24,9 +26,14 @@ const getUserPosts = async ()=>{
         let post = doc.data()
         postsArray.push(post)
     })
+    postsArray.sort((a,b)=>(a.seconds>b.seconds)?1:-1)
     setUserPostData(postsArray)
+    
+    console.log(userPostData)
 
 }
+let userPostDataDisplay
+
 
 
 
@@ -56,7 +63,7 @@ const addPostToFireBase = async ()=>{
 
     return (  
     <div className="MainContainer">
-        <div className ="storiesContainer">
+        <div className ="">
 
         </div>
 
@@ -75,15 +82,29 @@ const addPostToFireBase = async ()=>{
 
 
         
-        {userPostData? <div className="contentContainer">
-            <div className="userContainer">
-                <div className ="userImagePost" ><img className="userImagePostIMG" src ={props.userImage} alt="userImage" /></div>
-                <div className="userNameContainer">
-                    <div className="userNamePost">{props.userName}</div>
-                    <div className="postTimeStamp">{format(new Date(userPostData[1].timestamp.seconds*1000),"PPp").toString()}</div>
+        {userPostData? 
+        userPostData.map(item=>{
+            return(
+                <div key = {item.postID} id = {item.postID} className="contentContainer">
+                    <div className="userContainer">
+                        <div className ="userImagePost" ><img className="userImagePostIMG" src ={props.userImage} alt="userImage" /></div>
+                        <div className="userNameContainer">
+                            <div className="userNamePost">{props.userName}</div>
+                                <div className="postTimeStamp">{format(new Date(item.timestamp.seconds*1000),"PPp").toString()}</div>
+                        </div>
                     </div>
-            </div>
-        </div>
+                        <div className="postContent">
+                            {item.post.toString()}
+                        </div>
+        
+                        <div className ="reactionContainer">
+                            <div className="likeButton reactionButtons"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faThumbsUp} /></div>
+                            <div className="commentButton reactionButtons"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faComment} /></div>
+                            <div className="shareButton reactionButtons"><FontAwesomeIcon size="lg" className="friendsBarIcons" icon={faShare} /></div>
+                        </div>
+                </div>
+            )
+        })
         :<div></div>}
 
     </div>);
