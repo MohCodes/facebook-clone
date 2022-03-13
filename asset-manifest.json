@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.82a9fe9b.css",
-    "main.js": "/static/js/main.a18c58ab.js",
-    "static/js/787.060b83f1.chunk.js": "/static/js/787.060b83f1.chunk.js",
-    "static/media/2021_Facebook_icon.svg.png": "/static/media/2021_Facebook_icon.svg.ae87c8a885898d507e7b.png",
-    "static/media/facebooklogo.svg": "/static/media/facebooklogo.798ff419268bc0baf33577488789967c.svg",
-    "index.html": "/index.html",
-    "static/media/magnifying-glass-solid.svg": "/static/media/magnifying-glass-solid.ef21a5ef59b9a937c6a19e1c0f199602.svg",
-    "main.82a9fe9b.css.map": "/static/css/main.82a9fe9b.css.map",
-    "main.a18c58ab.js.map": "/static/js/main.a18c58ab.js.map",
-    "787.060b83f1.chunk.js.map": "/static/js/787.060b83f1.chunk.js.map"
+    "main.css": "/facebook-clone/static/css/main.82a9fe9b.css",
+    "main.js": "/facebook-clone/static/js/main.c51b5b39.js",
+    "static/js/787.060b83f1.chunk.js": "/facebook-clone/static/js/787.060b83f1.chunk.js",
+    "static/media/2021_Facebook_icon.svg.png": "/facebook-clone/static/media/2021_Facebook_icon.svg.ae87c8a885898d507e7b.png",
+    "static/media/facebooklogo.svg": "/facebook-clone/static/media/facebooklogo.798ff419268bc0baf33577488789967c.svg",
+    "index.html": "/facebook-clone/index.html",
+    "static/media/magnifying-glass-solid.svg": "/facebook-clone/static/media/magnifying-glass-solid.ef21a5ef59b9a937c6a19e1c0f199602.svg",
+    "main.82a9fe9b.css.map": "/facebook-clone/static/css/main.82a9fe9b.css.map",
+    "main.c51b5b39.js.map": "/facebook-clone/static/js/main.c51b5b39.js.map",
+    "787.060b83f1.chunk.js.map": "/facebook-clone/static/js/787.060b83f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82a9fe9b.css",
-    "static/js/main.a18c58ab.js"
+    "static/js/main.c51b5b39.js"
   ]
 }
