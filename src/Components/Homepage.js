@@ -19,7 +19,7 @@ useEffect (()=>{
         let fetcha = await fetch(dummyAPIFetch)
         fetcha = await fetcha.json()
         await setRandomUserArray(fetcha.results )
-        console.log(randomUserArray)
+    
 }
 dummyAPIFetchFunction()
     
