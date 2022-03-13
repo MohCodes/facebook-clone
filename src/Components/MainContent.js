@@ -29,7 +29,6 @@ const getUserPosts = async ()=>{
     postsArray.sort((a,b)=>(a.seconds>b.seconds)?1:-1)
     setUserPostData(postsArray)
     
-    console.log(userPostData)
 
 }
 let userPostDataDisplay
@@ -54,7 +53,6 @@ const addPostToFireBase = async ()=>{
     localStorage.setItem("postId",postID)
     document.getElementById("statuesInput").value = "";
     await getUserPosts()
-    console.log(userPostData)
 
 }
 
