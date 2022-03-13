@@ -12,3 +12,4 @@ Things to Work on
 - Styling
 - Responsivness
 - Increase Post Control
+- Testing
